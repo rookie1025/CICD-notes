@@ -20,20 +20,29 @@ Should keep shared library small in size as everytime a pipeline is run the enti
 When calling functions we can also pass the variable to the function, if the function is defined with input variables.
 
 Examples
+```
 def call () {
 sh “echo hello world”
 }
+```
 To call above in pipeline script put: helloWorld()
-----------------------------------------------------
+
+----
+
+```
 def call (String name, String dayOfWeek) {
 sh “echo Hello ${name}. today is ${dayOfWeek}”
 }
-
+```
 To call above in pipeline script put: helloWorld(“Darin”, “Monday”)
-------------------------------------------------------
+
+---
+
 to use map instead of positional parameters
-Def call (Map config = [:]) {
+```
+def call (Map config = [:]) {
 sh “echo Hello ${config.name}. today is ${config.dayOfWeek}”
 }
+```
 To call above in pipeline script put: helloWorld(name:“Darin”,  dayOfWeek:“Monday”)
 
