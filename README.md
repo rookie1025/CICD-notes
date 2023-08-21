@@ -24,13 +24,13 @@ def call () {
 sh “echo hello world”
 }
 To call above in pipeline script put: helloWorld()
-
+----------------------------------------------------
 def call (String name, String dayOfWeek) {
 sh “echo Hello ${name}. today is ${dayOfWeek}”
 }
 
 To call above in pipeline script put: helloWorld(“Darin”, “Monday”)
-
+------------------------------------------------------
 to use map instead of positional parameters
 Def call (Map config = [:]) {
 sh “echo Hello ${config.name}. today is ${config.dayOfWeek}”
