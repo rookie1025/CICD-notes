@@ -46,3 +46,19 @@ sh “echo Hello ${config.name}. today is ${config.dayOfWeek}”
 ```
 To call above in pipeline script put: helloWorld(name:“Darin”,  dayOfWeek:“Monday”)
 
+----
+Parameterize the pipeline
+---
+```
+parameters{
+choicename: 'action', choices: 'create\ndelete', description: 'choose create or destroy')
+```
+
+include the condition in stage
+```
+stages{
+  stage('git checkout'){
+      when { expression { param.action == 'create } }
+ ```
+
+ 
