@@ -1,7 +1,7 @@
 # CICD-notes
 ------------------------------------------------
-Jenkins Shared Library
-
+# Jenkins Shared Library
+------------------------------------------------
 Jenkins Shared Lib: Enable the pipeline code reusability where the same code is used for multiple pipelines. Also makes it easy to make the changes at a central place and propagate to all the pipelines.
 
 Create groovy functions and call as and when needed from shared lib.
